@@ -1,0 +1,36 @@
+.navbar {
+	display: flex;
+	justify-content: space-between;
+	align-items: center;
+	box-shadow: rgba(0, 0, 0, 0.15) 0 2px 10px 0;
+	padding: 1.5rem 2rem;
+	background: #2b2f77;
+	background: -webkit-linear-gradient(90deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+	background: linear-gradient(90deg, #2b2f77 0%, #141852 50%, #070b34 100%);
+
+	.brand {
+		font-size: 1.2rem;
+
+		span {
+			font-weight: 900;
+			text-transform: uppercase;
+		}
+	}
+
+	.links_list {
+		display: flex;
+		list-style: none;
+
+		li {
+			margin-right: 1rem;
+
+			a {
+				padding: .4rem .6rem; 
+
+				&.active {
+					border-bottom: 1px solid white;
+				}
+			}
+		}
+	}
+}

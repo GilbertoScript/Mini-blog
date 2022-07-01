@@ -4,7 +4,43 @@
     box-sizing: border-box;
 }
 
-main.container {
-    min-height: 60vh;
-    margin-bottom: 5rem;
+body {
+    background-color: #f6fcff;
+    font-family: 'Montserrat', sans-serif;
+}
+
+div.App {
+
+    main.container {
+        min-height: 60vh;
+        margin-bottom: 5rem;
+    }
+
+    input, 
+    textarea {
+
+        &::placeholder {
+            font-family: 'Montserrat', sans-serif;  
+        }
+
+        &:focus {
+            outline: none;
+        }
+    }
+
+    a, 
+    nav button {
+        text-decoration: none;
+        background-color: transparent;
+        border: none;
+        color: #FFF;
+        transition: .4s;
+        font-size: 1rem;
+        cursor: pointer;
+        font-family: 'Montserrat', sans-serif;
+
+        &:hover {
+            color: #bbb;
+        }
+    }
 }
