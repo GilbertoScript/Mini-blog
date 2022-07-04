@@ -5,7 +5,6 @@
 }
 
 body {
-    background-color: #f6fcff;
     font-family: 'Montserrat', sans-serif;
 }
 
@@ -16,13 +15,67 @@ div.App {
         margin-bottom: 5rem;
     }
 
-
     // Glogal styles
+    .error {
+        color: #721c24;
+        background-color: #f8d7da;
+        border: 1px solid #f5c6cb;
+        padding: 5px;
+        border-radius: 5px;
+    }
+
+    .btn {
+        background-color: #070b34;
+        color: #fff;
+        text-align: center;
+        cursor: pointer;
+        border-radius: 10px;
+        font-weight: bold;
+        border: none;
+        padding: 10px 15px;
+        font-size: 1rem;
+        transition: .4s;
+
+        &:hover {
+            background-color: lighten(#070b34, 10%);
+            color: #fff;
+        }
+
+        &.btn-dark {
+            background-color: #000;
+            border-radius: 0;
+        }
+
+        &.btn-danger {
+
+            &:hover {
+                background-color: #dc3545;
+            }
+        }
+
+        &.btn-outline {
+            background-color: transparent;
+            border: 1px solid #000;
+            border-radius: 0;
+            color: #000;
+            padding: 7px 30px;
+
+            &:hover {
+                background-color: #000;
+            }
+        }
+    }
+
+    button[disabled] {
+        background-color: #aaa;
+    }
+
     input, 
     textarea {
 
         &::placeholder {
             font-family: 'Montserrat', sans-serif;  
+            color: #AAA;
         }
 
         &:focus {
@@ -43,6 +96,31 @@ div.App {
 
         &:hover {
             color: #bbb;
+        }
+    }
+
+    // Form styles
+    form {
+        margin: 0 auto;
+
+        label {
+            display: flex;
+            flex-direction: column;
+            margin-bottom: 1px;
+
+            span {
+                margin-bottom: .3rem;
+                font-weight: bold;
+                text-align: left;
+            }
+        }
+
+        input,
+        textarea {
+            border: none;
+            border-bottom: 1px solid #ccc;
+            padding: .6rem 0;
+            background-color: transparent;
         }
     }
 }

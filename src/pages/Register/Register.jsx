@@ -1,57 +1,69 @@
 import styles from './Register.module.scss'
+import registerImg from '../../assets/register.svg'
+
 import { useState, useEffect } from 'react'
 
 const Register = () => {
 
 	return (
 		<div className={styles.register}>
-			<h1>Cadastre-se para postar</h1>
-			<p>Crie seu usuário e compartilhe suas histórias!</p>
 
-			<form>
-				
-				<label>
-					<span>Nome:</span>
-					<input 
-						type="text" 
-						name="displayName" 
-						placeholder="Nome do usuário"
-						required 
-					/>
-				</label>
+			<div className={styles.formBox}>
 
-				<label>
-					<span>E-mail:</span>
-					<input 
-						type="email" 
-						name="email" 
-						placeholder="Digite seu e-mail"
-						required 
-					/>
-				</label>
+				<div className={styles.imageColumn}>
+					<img src={registerImg} alt="Imagem de cadastrar" />
+				</div>
 
-				<label>
-					<span>Senha:</span>
-					<input 
-						type="password" 
-						name="password" 
-						placeholder="Digite sua senha"
-						required 
-					/>
-				</label>
+				<div className={styles.formColumn}>
+					<h1>Cadastre-se para postar</h1>
+					<p>Crie seu usuário e compartilhe suas histórias!</p>
 
-				<label>
-					<span>Confirmação de senha:</span>
-					<input 
-						type="password" 
-						name="confirmPassword" 
-						placeholder="Confirme sua senha"
-						required 
-					/>
-				</label>
+					<form>
+						
+						<label>
+							<span>Nome:</span>
+							<input 
+								type="text" 
+								name="displayName" 
+								placeholder="Nome do usuário"
+								required 
+							/>
+						</label>
 
-				<button className="btn">Cadastrar-se</button>
-			</form>
+						<label>
+							<span>E-mail:</span>
+							<input 
+								type="email" 
+								name="email" 
+								placeholder="Digite seu e-mail"
+								required 
+							/>
+						</label>
+
+						<label>
+							<span>Senha:</span>
+							<input 
+								type="password" 
+								name="password" 
+								placeholder="Digite sua senha"
+								required 
+							/>
+						</label>
+
+						<label>
+							<span>Confirmação de senha:</span>
+							<input 
+								type="password" 
+								name="confirmPassword" 
+								placeholder="Confirme sua senha"
+								required 
+							/>
+						</label>
+
+						<button className="btn">Cadastrar-se</button>
+					</form>
+				</div>
+			</div>
 		</div>
 	)
 }
