@@ -2,6 +2,7 @@ import styles from './Register.module.scss'
 import registerImg from '../../assets/register.svg'
 
 import { useState, useEffect } from 'react'
+import { useAuthentication } from '../../hooks/useAuthentication'
 
 const Register = () => {
 
@@ -12,7 +13,9 @@ const Register = () => {
 	const [confirmPassword, setConfirmPassword] = useState('');
 	const [error, setError] = useState('');
 
-	const handleSubmit = (e) => {
+	const { createUser, error: authError, loading } = useAuthentication();
+
+	const handleSubmit = async (e) => {
 		e.preventDefault();
 		setError('');
 
@@ -27,8 +30,24 @@ const Register = () => {
 			return;
 		}
 
-		console.log(user)
+		const res = await createUser(user);
+
+		console.log(res);
+
+		setDisplayName('');
+		setEmail('');
+		setPassword('');
+		setConfirmPassword('');
 	}
+
+	// Mapear se o erro do firebase mudou
+	useEffect(() => {
+
+		if(authError) {
+			setError(authError);
+		}
+
+	}, [authError])
 
 	return (
 		<div className={styles.register}>
@@ -93,7 +112,8 @@ const Register = () => {
 							/>
 						</label>
 
-						<button className="btn">Cadastrar-se</button>
+						{!loading && (<button className="btn">Cadastrar-se</button>)}
+						{loading && (<button className="btn" disabled>Aguarde...</button>)}
 					</form>
 				</div>
 			</div>
