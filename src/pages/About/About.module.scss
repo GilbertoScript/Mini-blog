@@ -1,0 +1,23 @@
+.about {
+	display: flex;
+	justify-content: center;
+	align-items: center;
+
+	.firstColumn {
+		text-align: left;
+		display: flex;
+		flex-direction: column;
+		align-items: start;
+
+		p {
+			color: #aaa;
+			margin: 2rem 0;
+		}
+
+		a {
+			display: block;
+			margin-top: 16px;
+			padding: 10px 15px;
+		}
+	}
+}

@@ -72,6 +72,15 @@ export const useAuthentication = () => {
 		}
 	}
 
+	// Logout - sign out
+	const logout = () => {
+
+		// memory leak
+		checkIfIsCancelled();
+
+		signOut(auth)
+	}
+
 	// Executado uma única vez
 	useEffect(() => {
 
@@ -82,6 +91,7 @@ export const useAuthentication = () => {
 		auth,
 		createUser,
 		error,
-		loading
+		loading,
+		logout
 	}
 }
