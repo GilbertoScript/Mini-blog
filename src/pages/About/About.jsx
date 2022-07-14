@@ -10,16 +10,19 @@ const About = () => {
 			<div className={styles.firstColumn}>
 				<h2>Sobre o Mini <span>Blog</span></h2>
 				<p>
-					Este projeto consiste basicamente em uma aplicação ReactJs para o Front-end <br />
-					e Firebase para Back-end/banco de dados.
+					Mini Blog - Cadastre-se e comece a postar hoje mesmo!<br />
+					Dia-a-dia, almoço, viagens, o que você quiser!<br /><br />
+
+					Este projeto consiste basicamente em uma aplicação ReactJs <br />
+					para o Front-end e Firebase para Back-end/banco de dados.
 				</p>
 				<Link to="/posts/create" className="btn">
-					Criar post
+					Crie um post!
 				</Link>
 			</div>
 
 			<div>
-				<img src={aboutUs} alt="Sobre nós" height="250" />
+				<img src={aboutUs} alt="Sobre nós" height="350" />
 			</div>				
 		</section>
 	)
