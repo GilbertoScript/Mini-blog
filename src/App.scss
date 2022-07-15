@@ -35,6 +35,8 @@ div.App {
         padding: 10px 15px;
         font-size: 1rem;
         transition: .4s;
+        min-width: 10rem;
+        height: 2.65rem;
 
         &:hover {
             background-color: lighten(#070b34, 10%);
@@ -101,7 +103,6 @@ div.App {
 
     // Form styles
     form {
-        margin: 0 auto;
 
         label {
             display: flex;

@@ -11,7 +11,8 @@
 
 	.formBox {
 		display: flex;
-		justify-content: space-evenly;
+		justify-content: center;
+		gap: 2rem;
 
 		width: 70%;
 		border-radius: 2rem;
@@ -22,14 +23,15 @@
 		box-shadow: 0 8px 19px -3.5px rgba(0, 0, 0, 0.47);
 
 		.imageColumn {
+			width: 50%;
 			border-right: 1px solid #2b2f77;
-
-			img {
-				height: 90%;
-			}
 		}
 
 		.formColumn {
+			width: 50%;
+			display: flex;
+			flex-direction: column;
+			justify-content: center;
 
 			h1 {
 				font-size: 1.8rem;

@@ -3,6 +3,7 @@ import registerImg from '../../assets/register.svg'
 
 import { useState, useEffect } from 'react'
 import { useAuthentication } from '../../hooks/useAuthentication'
+import SpinnerButton from '../../components/SpinnerButton/SpinnerButton'
 
 const Register = () => {
 
@@ -113,7 +114,7 @@ const Register = () => {
 						</label>
 
 						{!loading && (<button className="btn">Cadastrar-se</button>)}
-						{loading && (<button className="btn" disabled>Aguarde...</button>)}
+						{loading && (<SpinnerButton />)}
 					</form>
 				</div>
 			</div>
