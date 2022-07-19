@@ -70,11 +70,11 @@ export const useInsertDocument = (docCollection) => {
 	}
 
 	// deal with memory leak
-	useEffect(() => {
+	// useEffect(() => {
 
-		return () => {setCancelled(true)}
+	// 	return () => {setCancelled(true)}
 
-	}, [])
+	// }, [])
 
 	return { insertDocument, response }
 }

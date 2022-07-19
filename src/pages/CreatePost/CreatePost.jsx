@@ -3,6 +3,7 @@ import styles from './CreatePost.module.scss';
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
 import { useAuthValue } from '../../context/AuthContext';
+import { useInsertDocument } from '../../hooks/useInsertDocument';
 
 import SpinnerButton from '../../components/SpinnerButton/SpinnerButton';
 
@@ -13,18 +14,41 @@ const CreatePost = () => {
 	const [image, setImage] = useState('');
 	const [body, setBody] = useState('');
 	const [tags, setTags] = useState([]);
-	const [formError, setFormError] = useState([]);
+	const [formError, setFormError] = useState('');
+
+	const { user } = useAuthValue()
+
+	const { insertDocument, response } = useInsertDocument('posts');
 
 	const handleSubmit = (e) => {
 
 		e.preventDefault();
+		setFormError('');
 
+		// validar url da imagem
+
+		// criar array de tags
+
+		// checar todos os valores
+
+		insertDocument({
+			title,
+			image,
+			body,
+			tags,
+			uid: user.uid,
+			createdBy: user.displayName
+		})
+
+		// redirecionar para a home
 	}
 
 	return (
 		<div className={styles.createPost}>
 			<h2>Criar post</h2>
 			<p>Escreva sobre o que quiser, e compartilhe seu conhecimento!</p>
+
+			{response.error && (<p className="error">{response.error}</p>)}
 
 			<form onSubmit={handleSubmit}>
 				
@@ -72,9 +96,8 @@ const CreatePost = () => {
 					/>
 				</label>
 
-				<button className="btn">Cadastrar-se</button>
-				{/*{!loading && (<button className="btn">Cadastrar-se</button>)}
-				{loading && (<SpinnerButton />)}*/}
+				{!response.loading && (<button className="btn">Cadastrar</button>)}
+				{response.loading && (<SpinnerButton />)}
 			</form>
 		</div>
 	)
