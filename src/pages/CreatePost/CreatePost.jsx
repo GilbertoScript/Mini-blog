@@ -16,9 +16,10 @@ const CreatePost = () => {
 	const [tags, setTags] = useState([]);
 	const [formError, setFormError] = useState('');
 
-	const { user } = useAuthValue()
+	const { user } = useAuthValue();
 
 	const { insertDocument, response } = useInsertDocument('posts');
+	const navigate = useNavigate();
 
 	const handleSubmit = (e) => {
 
@@ -26,29 +27,44 @@ const CreatePost = () => {
 		setFormError('');
 
 		// validar url da imagem
+		try {
 
-		// criar array de tags
+			new URL(image);
+
+		} catch(error) {
+
+			console.log(error);
+			setFormError('A imagem precisa ser uma URL.');
+		}
+
+		// criar novo array de tags a partir de cada virgula e formatar
+		const tagsArray = tags.split(',').map((tag) => { tag.trim().toLowerCase() });
 
 		// checar todos os valores
+		if(!title || !image || !body || !tags) {
+
+			setFormError('Por favor preencha todos os campos!');
+		}
+
+		if(formError) return;
 
 		insertDocument({
 			title,
 			image,
 			body,
-			tags,
+			tagsArray,
 			uid: user.uid,
 			createdBy: user.displayName
 		})
 
 		// redirecionar para a home
+		navigate('/');
 	}
 
 	return (
 		<div className={styles.createPost}>
 			<h2>Criar post</h2>
 			<p>Escreva sobre o que quiser, e compartilhe seu conhecimento!</p>
-
-			{response.error && (<p className="error">{response.error}</p>)}
 
 			<form onSubmit={handleSubmit}>
 				
@@ -66,7 +82,7 @@ const CreatePost = () => {
 				<label>
 					<span>URL da imagem: </span>
 					<input 
-						type="text" 
+						type="url" 
 						name="image" 
 						required
 						placeholder="Insira uma imagem que representa o seu post" 
@@ -98,6 +114,9 @@ const CreatePost = () => {
 
 				{!response.loading && (<button className="btn">Cadastrar</button>)}
 				{response.loading && (<SpinnerButton />)}
+
+				{response.error && (<p className="error">{response.error}</p>)}
+				{formError && (<p className="error">{formError}</p>)}
 			</form>
 		</div>
 	)
