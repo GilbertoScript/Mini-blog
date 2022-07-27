@@ -38,7 +38,7 @@ const CreatePost = () => {
 		}
 
 		// criar novo array de tags a partir de cada virgula e formatar
-		const tagsArray = tags.split(',').map((tag) => { tag.trim().toLowerCase() });
+		const tagsArray = tags.split(',').map((tag) => tag.trim().toLowerCase());
 
 		// checar todos os valores
 		if(!title || !image || !body || !tags) {
