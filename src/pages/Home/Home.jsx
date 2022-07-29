@@ -2,11 +2,14 @@ import styles from './Home.module.scss';
 
 import { useNavigate, Link } from 'react-router-dom'
 import { useState } from 'react';
+import { useFetchDocuments } from '../../hooks/useFetchDocuments';
+
+import PostDetails from '../../components/PostDetails/PostDetails';
 
 const Home = () => {
 
 	const [query, setQuery] = useState('');
-	const [posts] = useState([]);
+	const { documents: posts, loading } = useFetchDocuments('posts');
 
 	const handleSubmit = (e) =>  {
 
@@ -27,7 +30,12 @@ const Home = () => {
 			</form>
 
 			<div>
-				<h1>Posts..</h1>
+				{loading && <p>... Carregando ...</p>}
+
+				{posts && posts.map((post) => (
+
+					<PostDetails key={post.id} post={post} />
+				))}
 
 				{posts && posts.length === 0 && (
 
