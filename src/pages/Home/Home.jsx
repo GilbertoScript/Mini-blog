@@ -1,4 +1,5 @@
 import styles from './Home.module.scss';
+import searchIcon from '../../assets/search.png';
 
 import { useNavigate, Link } from 'react-router-dom'
 import { useState } from 'react';
@@ -26,7 +27,10 @@ const Home = () => {
 					placeholder="Ou busque por tags..." 
 					onChange={(e) => {setQuery(e.target.value)}}
 				/>
-				<button className="btn btn-dark">Pesquisar</button>
+				<button className="btn btn-dark">
+					Pesquisar
+					<img src={searchIcon} alt="ícone de pesquisa" />
+				</button>
 			</form>
 
 			<div>

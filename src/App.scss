@@ -12,7 +12,10 @@ div.App {
 
     main.container {
         min-height: 60vh;
-        margin-bottom: 5rem;
+        padding-bottom: 5rem;
+        background-image: radial-gradient(#f5f5fc 2px, transparent 2px);
+        background-size: 32px 32px;
+        background-color: #ffffff;
     }
 
     // Glogal styles
@@ -44,15 +47,15 @@ div.App {
         }
 
         &.btn-dark {
-            background-color: #000;
+            background-color: #070b34;
             border-radius: 0;
+
+            &:hover { background-color: lighten(#070b34, 20%);}
         }
 
         &.btn-danger {
 
-            &:hover {
-                background-color: #dc3545;
-            }
+            &:hover {background-color: #dc3545;}
         }
 
         &.btn-outline {
