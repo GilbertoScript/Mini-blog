@@ -50,7 +50,10 @@ div.App {
             background-color: #070b34;
             border-radius: 0;
 
-            &:hover { background-color: lighten(#070b34, 20%);}
+            &:hover { 
+                background-color: lighten(#070b34, 20%);
+                color: white;
+            }
         }
 
         &.btn-danger {
