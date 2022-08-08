@@ -1,15 +1,21 @@
 import styles from './Post.module.scss';
 
 import { useParams } from 'react-router-dom';
+import { useFetchSingleDocument } from '../../hooks/useFetchSingleDocuments';
 
 const Post = () => {
 
 	const { id } = useParams();
+	const { document: post, loading } = useFetchSingleDocument('posts', id)
 
 	return (
 		<>
-			<h1>Post</h1>
-			{id}
+			{loading && (<p>Carregando post...</p>)}
+			{post && (
+				<>
+					<h1>{post.title}</h1>
+				</>
+			)}
 		</>
 	)
 }

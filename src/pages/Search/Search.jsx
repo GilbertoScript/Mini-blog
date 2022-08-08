@@ -20,7 +20,10 @@ const Search = () => {
 				{loading && <p>... Carregando ...</p>}
 
 				{posts && posts.map((post) => (
-					<PostDetails key={post.id} post={post} />
+					<>
+						<PostDetails key={post.id} post={post} />
+						<Link to="/" className="btn btn-dark">Voltar</Link>
+					</>
 				))}
 
 				{posts && posts.length === 0 && (
