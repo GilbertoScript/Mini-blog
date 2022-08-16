@@ -13,7 +13,7 @@ const Post = () => {
 		<div className={styles.post_container}>
 			{loading && (<p>Carregando post...</p>)}
 			{post && (
-				<div>
+				<div className={styles.post_detail}>
 					<h1>{post.title}</h1>
 					<img 
 						src={post.image} 
