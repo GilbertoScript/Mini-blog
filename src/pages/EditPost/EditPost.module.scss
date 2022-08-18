@@ -1,0 +1,39 @@
+.editPost {
+	text-align: center;
+	padding-top: 3.5rem;
+
+	h2 {
+		font-size: 2.2rem;
+
+		span {
+			font-size: 2rem;
+			color: #444;
+		}
+	}
+
+	p {
+		color: #AAA;
+		margin: 1rem 0 2rem;
+	}
+
+	form {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		gap: 1rem;
+
+		label {
+			width: 60%;
+		}
+
+		.previewTitle {
+			margin-bottom: .2rem;
+			color: #000;
+		}
+
+		.previewImg {
+			margin-bottom: 1rem;
+			max-width: 100%;
+		}
+	}
+}
