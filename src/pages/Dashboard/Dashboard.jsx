@@ -14,7 +14,7 @@ const Dashboard = () => {
 
 	const handleDeleteDocument = (id) => {
 
-
+		
 	}
 
 	if(loading) {
@@ -22,7 +22,7 @@ const Dashboard = () => {
 	}
 
 	return (
-		<div>
+		<div className={styles.dashboard}>
 			<h1>Dashboard</h1>
 			<p>Gerencie os seus posts</p>
 			{posts && posts.length === 0 ? (
@@ -35,14 +35,14 @@ const Dashboard = () => {
 				</div>
 			) : (
 				<>
-					<div>
+					<div className={styles.posts_header}>
 						<span>Título</span>
 						<span>Ações</span>
 					</div>
 
 					{posts && posts.map((post) => (
 
-						<div key={post.id}>
+						<div key={post.id} className={styles.post_row}>
 							<p>{post.title}</p>
 							<div>
 								<Link to={`/posts/${post.id}`} className="btn btn-outline">
@@ -51,12 +51,12 @@ const Dashboard = () => {
 								<Link to={`/posts/edit/${post.id}`} className="btn btn-outline">
 									Editar
 								</Link>
-								<button 
+								<a 
 									onClick={() => {handleDeleteDocument(post.id)}}
-									className="btn btn-outline btn-danger"
+									className="btn btn-danger btn-outline"
 								>
 									Excluir
-								</button>
+								</a>
 							</div>						
 						</div>
 					))}

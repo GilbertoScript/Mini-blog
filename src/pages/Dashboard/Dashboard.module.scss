@@ -1,0 +1,53 @@
+.dashboard {
+	text-align: center;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	padding-top: 3.5rem;
+
+	> h1 {
+		margin-bottom: .5rem;
+	}
+
+	> p {
+		margin-bottom: 1rem;
+		color: #AAA;
+	}
+
+	.posts_header, .post_row {
+		display: flex;
+		justify-content: space-between;
+		width: 80%;
+		padding: .8rem;
+		align-items: center;
+	}
+
+	.posts_header {
+		font-weight: bold;
+		border-bottom: 2px solid #ccc;
+	}
+
+	.post_row {
+		border-bottom: 1px solid #eee;
+
+		a {
+			margin: 0 5px;
+			height: 30px;
+			width: 100px;
+			font-size: .8rem;
+		}
+	}
+
+	.noposts {
+		text-align: center;
+
+		p {
+			margin-bottom: 1.5rem;
+		}
+
+		a {
+			padding: 10px 25px;
+		}
+	}
+}
