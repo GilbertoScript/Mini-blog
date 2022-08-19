@@ -3,6 +3,18 @@
 	display: flex;
 	flex-direction: column;
 	align-items: center;
+	text-align: center;
 	justify-content: center;
-	background-color: #edf3f6;
+	background: rgba(160, 233, 255, 0.63);
+	background: -webkit-linear-gradient(90deg, rgba(160, 233, 255, 0.63) 0%, rgba(168, 240, 255, 0.48) 50%, rgba(198, 245, 255, 0.37) 100%);
+	background: linear-gradient(90deg, rgba(160, 233, 255, 0.63) 0%, rgba(168, 240, 255, 0.48) 50%, rgba(198, 245, 255, 0.37) 100%);
+
+	p a {
+		color: #0105cd;
+
+		&:hover {
+			color: #0105cd;
+			border-bottom: 1px solid #0105cd;
+		}
+	}
 }

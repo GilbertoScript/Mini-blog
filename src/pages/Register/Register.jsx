@@ -1,9 +1,9 @@
-import styles from './Register.module.scss'
-import registerImg from '../../assets/register.svg'
+import registerImg from '../../assets/register.svg';
 
-import { useState, useEffect } from 'react'
-import { useAuthentication } from '../../hooks/useAuthentication'
-import SpinnerButton from '../../components/SpinnerButton/SpinnerButton'
+import { useState, useEffect } from 'react';
+import { useAuthentication } from '../../hooks/useAuthentication';
+import SpinnerButton from '../../components/SpinnerButton/SpinnerButton';
+import AuthContainer from '../../components/AuthContainer/AuthContainer';
 
 const Register = () => {
 
@@ -51,14 +51,14 @@ const Register = () => {
 	}, [authError])
 
 	return (
-		<div className={styles.register}>
-			<div className={styles.formBox}>
+		<AuthContainer>
+			<div className="formBox">
 
-				<div className={styles.imageColumn}>
+				<div className="imageColumn">
 					<img src={registerImg} alt="Imagem de cadastrar" />
 				</div>
 
-				<div className={styles.formColumn}>
+				<div className="formColumn">
 					<h1>Cadastre-se para postar</h1>
 					<p>Crie seu usuário e compartilhe suas histórias!</p>
 
@@ -118,7 +118,7 @@ const Register = () => {
 					</form>
 				</div>
 			</div>
-		</div>
+		</AuthContainer>
 	)
 }
 

@@ -1,9 +1,9 @@
-import styles from './Login.module.scss'
-import loginImg from '../../assets/login.svg'
+import loginImg from '../../assets/login.svg';
 
-import { useState, useEffect } from 'react'
-import { useAuthentication } from '../../hooks/useAuthentication'
-import SpinnerButton from '../../components/SpinnerButton/SpinnerButton'
+import { useState, useEffect } from 'react';
+import { useAuthentication } from '../../hooks/useAuthentication';
+import SpinnerButton from '../../components/SpinnerButton/SpinnerButton';
+import AuthContainer from '../../components/AuthContainer/AuthContainer';
 
 const Login = () => {
 
@@ -40,14 +40,14 @@ const Login = () => {
 	}, [authError])
 
 	return (
-		<div className={styles.login}>
-			<div className={styles.formBox}>
+		<AuthContainer>
+			<div className="formBox">
 
-				<div className={styles.imageColumn}>
+				<div className="imageColumn">
 					<img src={loginImg} alt="Imagem de login" />
 				</div>
 
-				<div className={styles.formColumn}>
+				<div className="formColumn">
 					<h1>Entrar</h1>
 					<p>Faça o login para poder utilizar o sistema!</p>
 
@@ -84,7 +84,7 @@ const Login = () => {
 					</form>
 				</div>
 			</div>
-		</div>
+		</AuthContainer>
 	)
 }
 

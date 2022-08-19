@@ -7,6 +7,7 @@
 	background: -webkit-linear-gradient(90deg, #2b2f77 0%, #141852 50%, #070b34 100%);
 	background: linear-gradient(90deg, #2b2f77 0%, #141852 50%, #070b34 100%);
 	box-shadow: 0px 5px 10px #aaa;
+	flex-wrap: wrap;
 
 	.brand {
 		font-size: 1.2rem;
@@ -19,6 +20,7 @@
 
 	.links_list {
 		display: flex;
+		flex-wrap: wrap;
 		list-style: none;
 
 		li {
