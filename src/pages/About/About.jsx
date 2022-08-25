@@ -21,7 +21,7 @@ const About = () => {
 				</Link>
 			</div>
 
-			<div>
+			<div className={styles.imageColumn}>
 				<img src={aboutUs} alt="Sobre nós" height="350" />
 			</div>				
 		</section>

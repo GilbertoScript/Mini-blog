@@ -53,3 +53,32 @@
 		}
 	}
 }
+
+// Media Query
+@media (max-width: 767.98px) {
+
+	.authContainer {
+		border-radius: 0 0 1rem 1rem;
+
+		.formBox {
+			width: 95%;
+
+			.imageColumn {
+				display: none;
+			}
+
+			.formColumn {
+				width: 100%;
+				padding: 0 1rem;
+
+				h1 {
+					font-size: 1.45rem;
+				}
+
+				button.btn {
+					width: 100%;
+				}
+			}
+		}
+	}
+}

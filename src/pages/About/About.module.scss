@@ -22,3 +22,25 @@
 		}
 	}
 }
+
+// Media Query
+@media (max-width: 767.98px) {
+
+	.about {
+		flex-direction: column;
+
+		.firstColumn {
+			text-align: justify;
+			align-items: center;
+			max-width: 95%;
+
+			a {
+				width: 100% !important;
+			}
+		}
+
+		.imageColumn img {
+			max-width: 300px;
+		}
+	}
+}

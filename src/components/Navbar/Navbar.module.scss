@@ -36,3 +36,23 @@
 		}
 	}
 }
+
+// Media Query
+@media (max-width: 767.98px) {
+
+	.navbar {
+		justify-content: center;
+		flex-direction: column;
+		padding: 1.5rem 1rem;
+
+		.links_list {
+			flex-wrap: nowrap;
+			margin-top: 2rem;
+			justify-content: center;
+
+			li {
+				margin-right: 0;
+			}
+		}
+	}
+}
