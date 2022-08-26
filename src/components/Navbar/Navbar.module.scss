@@ -46,12 +46,16 @@
 		padding: 1.5rem 1rem;
 
 		.links_list {
-			flex-wrap: nowrap;
 			margin-top: 2rem;
 			justify-content: center;
 
 			li {
 				margin-right: 0;
+
+				a.active {
+					color: #ccc;
+					border-bottom: 0;
+				}
 			}
 		}
 	}

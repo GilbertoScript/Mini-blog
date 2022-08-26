@@ -32,3 +32,27 @@
 		}
 	}
 }
+
+// Media Query
+@media (max-width: 767.98px) {
+
+	.post_container {
+		text-align: center;
+		display: flex;
+		flex-direction: initial;
+		align-items: initial;
+		justify-content: initial;
+		
+		h1 {
+			font-size: 1.45rem;
+		}
+
+		img {
+			width: 85%;
+		}
+
+		.post_detail {
+			margin: 0 auto;
+		}
+	}
+}

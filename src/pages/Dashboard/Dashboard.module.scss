@@ -51,3 +51,20 @@
 		}
 	}
 }
+
+// Media Query
+@media (max-width: 767.98px) {
+
+	.dashboard {
+
+		> h1 {
+			font-size: 1.45rem;
+		}
+
+		.post_row div {
+			display: flex;
+			flex-direction: column;
+			gap: .75rem;
+		}
+	}
+}

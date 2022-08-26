@@ -41,3 +41,28 @@
 		}
 	}
 }
+
+// Media Query
+@media (max-width: 767.98px) {
+
+	.home {
+
+		h1 {
+			font-size: 1.45rem;
+		}
+
+		.search_form {
+			flex-direction: column;
+			width: 85%;
+
+			input {
+				margin: 0 0 1rem;
+				width: 100%;
+			}
+		}
+
+		.general_posts {
+			width: 95%;
+		}
+	}
+}

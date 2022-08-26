@@ -39,7 +39,7 @@ const Home = () => {
 				</button>
 			</form>
 
-			<div>
+			<div className={styles.general_posts}>
 				{loading && <p>... Carregando ...</p>}
 
 				{posts && posts.map((post) => (
