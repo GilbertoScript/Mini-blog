@@ -37,3 +37,31 @@
 		}
 	}
 }
+
+// Media Query
+@media (max-width: 767.98px) {
+
+	.editPost {
+
+		h2 {
+			font-size: 1.45rem;
+
+			span {
+				font-size: 1.45rem;
+			}
+		}
+
+		form {
+			width: 95%;
+			margin: 0 auto;
+
+			label {
+				width: 90%;
+			}
+
+			button {
+				width: 70%;
+			}
+		}
+	}
+}
