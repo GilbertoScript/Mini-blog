@@ -1,4 +1,5 @@
 import styles from './Navbar.module.scss';
+import logo from '../../assets/logo.svg';
 import { NavLink } from 'react-router-dom';
 
 import { useAuthentication } from '../../hooks/useAuthentication';
@@ -12,7 +13,7 @@ const Navbar = () => {
 	return (
 		<nav className={styles.navbar}>
 			<NavLink to="/" className={styles.brand}>
-				Mini <span>Blog</span>
+				<img src={logo} alt="Logo do Mini Blog" height="30" />
 			</NavLink>
 
 			<ul className={styles.links_list}>
