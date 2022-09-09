@@ -4,25 +4,25 @@
 <p align="center">
   <a href="https://github.com/GilbertoASJ/Mini-blog">
     <img 
-      src="./src/assets/urban-cloud.png" 
+      src="https://raw.githubusercontent.com/GilbertoASJ/Mini-blog/81df65859c800ad32c630691bc3fa39f211f1c02/src/assets/logo-black.svg" 
       alt="Logo Mini blog"
-      height="70" 
+      height="60" 
     >
   </a>
 
-  <h2 align="center">Secret word</h2>
+  <h2 align="center">Mini Blog</h2>
 
   <p align="center">
-    Secret word (Palavra secreta) - Um jogo feito em React para adivinhar palavras aleatórias
+    Mini Blog - Uma aplicação React para postar sobre o que você imaginar!
     <br />
-    <a href="https://github.com/GilbertoASJ/Secret-word"><strong>Explore os arquivos »</strong></a>
+    <a href="https://github.com/GilbertoASJ/Mini-blog"><strong>Explore os arquivos »</strong></a>
     <br />
     <br />
-    <a href="https://github.com/GilbertoASJ/Secret-word">Ver Demo</a>
+    <a href="https://github.com/GilbertoASJ/Mini-blog">Ver Demo</a>
     ·
-    <a href="https://github.com/GilbertoASJ/Secret-word/issues">Reportar Bug</a>
+    <a href="https://github.com/GilbertoASJ/Mini-blog/issues">Reportar Bug</a>
     ·
-    <a href="https://github.com/GilbertoASJ/Secret-word/issues">Implementar Feature</a>
+    <a href="https://github.com/GilbertoASJ/Mini-blog/issues">Implementar Feature</a>
   </p>
 </p>
 
@@ -58,42 +58,45 @@ https://user-images.githubusercontent.com/56325350/189160098-d94ed266-4bc3-40cb-
 
 <hr>
 
-Secret Word ou Palavra secreta é uma aplicação web desenvolvida com React, que tem o intuito de trazer o tema de jogos de adivinhar palavras para a web. Essa aplicação foi desenvolvida em conjuto com o curso do Matheus Batisti - React do 0 a maestria.
+O Mini Blog é uma aplicação feita em React, que tem por objetivo ser um ambiente onde o usuário possa postar sobre seu dia-a-dia, trabalho, viagens, etc.
+Para visualizar os posts não precisa estar cadastrado, mas para postar precisa fazer o login (banco de dados com o firebase).
 
-A milha extra: Resolvi por conta própria fazer algumas modificações como o design da aplicação, alterei completamente e adicionei algumas animações, entre outros pequenos detalhes.
+Alguns dos assuntos abordados durante a construção: ReactJs, Sass, Firebase, Hooks, etc.
 
 ### Construido com
 
 As tecnologias usadas nesse projeto foram:
 * [HTML5](https://developer.mozilla.org/pt-BR/docs/Web/Guide/HTML/HTML5)
-* [React](https://pt-br.reactjs.org/)
 * [CSS](https://developer.mozilla.org/pt-BR/docs/Web/CSS)
+* [SASS](https://sass-lang.com/)
+* [React](https://pt-br.reactjs.org/)
+* [Firebase](https://firebase.google.com/)
 
 <!-- GETTING STARTED -->
 ## Como usar
 
-Acesse o projeto on-line: <a href="https://secret-word-gilbertoasj.vercel.app/">Secret Word</a>, após acessar, você pode dar play no game e começar a adivinhar as palavras de acordo com a dica(categoria).
+Acesse o projeto on-line: <a href="https://mini-blog-gilbertoasj.vercel.app/" target="blank_">Mini Blog</a>, após acessar, você pode visualizar os posts criados por outros usuários ou se cadastrar e postar você mesmo!
 
 Este é um exemplo de como você pode dar instruções sobre como configurar seu projeto localmente. Para obter uma cópia local instalada e funcionando, siga estas etapas simples de exemplo.
 
 ### Pré-requisitos
 
-``` git e npm ```
+``` git, npm ou yarn```
 
 ### Instalação
 
 ```
 # Clone este repositório
-$ git clone https://github.com/GilbertoASJ/Secret-word.git
+$ git clone https://github.com/GilbertoASJ/Mini-blog.git
 
 # Acesse a pasta do projeto no seu terminal/cmd
-$ cd Secret-word
+$ cd Mini-blog
 
 # Instalar as dependências
-$ npm install
+$ yarn install
 
 # Iniciar o projeto
-$ npm start
+$ yarn dev
 
 # Abra localhost:3000 no navegador e veja o projeto rodar
 ```
