@@ -25,6 +25,8 @@ import EditPost from './pages/EditPost/EditPost';
 import Navbar from './components/Navbar/Navbar';
 import Footer from './components/Footer/Footer';
 
+import ReactGA from "react-ga4";
+
 function App() {
 
     const [user, setUser] = useState(undefined);
@@ -33,6 +35,12 @@ function App() {
     const loadingUser = user === undefined;
 
     useEffect(() => {
+
+        // Send a custom event
+        ReactGA.event({
+            category: "your category",
+            action: "your action",
+        });
 
         onAuthStateChanged(auth, (user) => {
             setUser(user)
